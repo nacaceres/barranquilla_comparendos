@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viz_Comparendos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Dataset</h2>
+    <h5>Título de los Datos</h5>
+    <p>Comparendos - Control y Regulación Barranquilla</p>
+    <h5>Descripción de los Datos</h5>
+    <p>Contiene información relacionada con los comparendos realizados a partir del 2016 en el distrito de Barranquilla</p>
+    <h5>Datos proporcionados por</h5>
+    <p>Alcaldía Distrital de Barranquilla, Distrito Especial, Industrial y Portuario</p>
+    <h5>Fuente de los datos</h5>
+    <p>Datos tomados de: <a href="https://www.datos.gov.co/">Datos Abiertos Colombia</a></p>
+    <p><a href="https://www.datos.gov.co/Transporte/Comparendos-Control-y-Regulaci-n-Barranquilla/2uuh-awp9"> Link a los datos</a></p>
+    <h5>Ejemplo de la tabla</h5>
+    <img src="./Captura1.png" alt="Ejemplo de la tabla" style="width:100%;height:600px;">
+    <h5>Columnas en este conjunto de datos:</h5>
+    <img src="./Captura2.png" alt="Columnas en este conjunto de datos" style="width:100%;height:600px;">
+    <p>En la tabla mostrada anteriormente podemos identificar las siguientes columnas:</p>
+    <ol>
+      <li>Año_Infracción: Año del presente registro.</li>
+      <li>Mes_Infracción: Mes del presente registro.</li>
+      <li>Cod_Infracción: Codigo de infracción.</li>
+      <li>Desc_Infracción: Descripción de la infracción del registro.</li>
+      <li>Tipo_Infracción: De tipo transito o transporte.</li>
+      <li>Servicio_Vehiculo_Infractor: Otros-Dimplomatico-Particular-Publico</li>
+      <li>Clase_Vehiculo_Infractor: Automovil- Biclicleta-Motocicleta-...</li>
+    </ol>
+    <h1>Abril-Julio, la temporada donde más se impusieron comparendos en Barranquilla</h1>
+    <h3>La cantidad de partes impuestos por los agentes de transito varia en gran medida segun la clase del vehiculo  a la que le asignan el comparendo, ya que el maximo de comparendos en un mes para la clase motocicleta es de 12,837 mientras que para la clase vehiculo es de 7,108.</h3>
+    <p> En Barranquilla, existe una gran cantidad de infractores de transito en la ciudad, en la visualizacion que se muestra a continuación podemos ver una grafica que muestra para un mes de un año y una clase de vehiculo la cantidad de comparendos impuestos. Además, podemos filtrar por un año en particular o por una clase de vehiculo y la visualización se re ajustara. </p>
+  </div>
+  <div class="viz">
+    <div class='tableauPlaceholder' id='viz1571156568012' style='position: relative'>
+      <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Viz_Comparendos_Barranquilla&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Viz_Comparendos_Barranquilla&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Viz_Comparendos_Barranquilla&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1571156568012');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1500px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="container">
+      <h3>Siguiendo el estándar de Tamara, pasaremos a describir el “What”:</h3>
+      <p>Al ver la fuente de datos podemos ver que es un dataset de tipo temporal, compuesto por ítems y atributos, donde la pagina que tiene el dataset permite hacer la descarga en formato CSV,RDF,XML,TSV,RSS o permite configurar un API desde la fuente. Además, cabe resaltar que la disponibilidad del dataset es de tipo estática y fue actualizada por ultima vez el 10 de octubre de 2019. </p>
+      <p>Dado que queriamos consolidados por meses, sumamos la cantidad de infracciones por tipo de vehiculo en un mes para obtener el atributo Suma Cantidad Infractores.</p>
+      <p>A continuación presentaremos unicamente los atributos que usamos para la visualización con sus correspondientes descripciones y ejemplos de ítems asociados a esos atributos:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Atributo</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Valores de los items</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Año_Infracción</td>
+            <td>Es un Atributo ordenado cuantitativo secuencial</td>
+            <td>Valores del 2015-2019</td>
+          </tr>
+          <tr>
+            <td>Mes_Infracción</td>
+            <td>Es un Atributo ordenado cuantitativo cíclico</td>
+            <td>Valores de 1-12</td>
+          </tr>
+          <tr>
+            <td>Clase Vehiculo Infractor</td>
+            <td>Es un atributo categorico.</td>
+            <td>Mas de 30 clases diferentes de vehiculos</td>
+          </tr>
+          <tr>
+            <td>Suma Cantidad Infractores</td>
+            <td>Es un Atributo ordenado cuantitativo secuencial</td>
+            <td>Valores entre 0-12,837</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Es decir un item representa cuantas infracciones de transito se generaron en el año XXX, en el mes XXX al tipo de vehiculo XXX.</p>
+      <h3>Siguiendo el estandar de Tamara, pasaremos a describir el “Why”:</h3>
+      <ul>
+        <li><b>Tarea #1 principal:</b> Identificar <b>Identify</b> los outliers <b>Outliers</b> de la cantidad de comparendos que se generaron en un mes particular sobre una clase de vehiculos.</li>
+        <li><b>Tarea #1 secundaria:</b> Comparar <b>Compare</b> las distribuciones <b>Distributions</b> de la cantidad de comparendos impuesta a diferentes clases de vehiculos a lo largo del tiempo.</li>
+        <li><b>Tarea #2 secundaria:</b>Identificar <b>Identify</b> las tendencias <b>Trends</b> sobre el aumento o disminucion de la cantidad de comparendos que se imponen a los barranquilleros desde el 2015 al 2019</li>
+      </ul>
+      <h3>Siguiendo el estandar de Tamara, pasaremos a describir el How:</h3>
+      <h4>Marcas:</h4>
+      <ul>
+        <li> <b> Puntos: </b> Usamos los puntos para referirnos a un registro en específico de nuestra tabla es decir al pararnos sobre un punto podemos conocer para un año, mes y clase de vehiculo, la cantidad de comparendos que fueron impuestos. </li>
+        <li> <b> Lineas: </b> Usamos los lineas para mostrar la tendencia de como incrementan o se decrementan los comparendos a través de los meses. </li>
+      </ul>
+      <h4>Canales:</h4>
+      <ul>
+        <li> <b> Color Hue: </b> Usamos el color hue para representar de que año son los registros.</li>
+        <li> <b> Areas: </b> Usamos las areas para representar la cantidad de comparendos que fueron impuestos en una temporalidad determinada. </li>
+        <li> <b> Position on common scale: </b> Usamos el eje y para representar la cantidad de comparendos y el eje x para representar la temporalidad. </li>
+      </ul>
+      <h4>Mas sobre el how:</h4>
+      <ul>
+      <li>En cuanto al <b>encode</b> se uso un separate, order and align para representar los elementos dentro del grafico.</li>
+      <li>En cuanto al <b>Manipulate</b> se uso un select para poder dar la informacion detallada de un punto de la gráfica.</li>
+      <li>En cuanto al <b>Reduce</b> se uso un filter sobre los años y sobre la clase del vehiculo.</li>
+      </ul>
+      <h3>License:</h3>
+      <p> MIT License </p>
+      <p> Copyright (c) 2019 Nicolás Cáceres Acosta </p>
+      <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
+      <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+      <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+    </div>
+  </body>
+  </html>
