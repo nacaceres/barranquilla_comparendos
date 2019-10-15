@@ -1,6 +1,6 @@
 # barranquilla_comparendos
 Visualización sobre los comparendos que se han realizado desde 2015 en la ciudad de Barranquilla.
-https://nacaceres.github.io/barranquilla_comparendos/
+[Link a la Viz](https://nacaceres.github.io/barranquilla_comparendos/)
 # Tecnologias usadas
 * HTML
 * CSS
