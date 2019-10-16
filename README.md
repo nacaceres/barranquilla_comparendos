@@ -9,7 +9,7 @@ Mostrar insights acerca de los comparendos en la ciudad de Barranquilla.
 * Tableau
 
 # Screenshot
-[Image]!("https://raw.githubusercontent.com/nacaceres/barranquilla_comparendos/master/Captura de Pantalla 2019-10-15 a la(s) 4.42.34 p.%C2%A0m..png")
+![Screenshot Pag Web](https://github.com/nacaceres/barranquilla_comparendos/blob/master/screenshot.png)
 # Autores
 [Nicolás Cáceres Acosta](https://github.com/nacaceres)   
 
